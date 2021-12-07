@@ -21,6 +21,7 @@ const App = () => {
           onListItemSelect={(itemId) => setSelectItemId(itemId)}
         />
         <SubCategories
+          key={selectItemId}
           subcategories={
             activeCategory
               ? activeCategory.items.filter((item) => item.includes(searchText))
